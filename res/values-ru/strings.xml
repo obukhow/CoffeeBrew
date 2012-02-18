@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Кофе</string>
+    <string name="brew_up">Сварилось!</string>
+    <string name="start">Начать</string>
+    <string name="stop">Остановить</string>
+    <string name="min">%1$s мин</string>
+    <string name="sec">%1$s сек</string>
+    <string name="brews">Варок: </string>
+    <string name="none">Нет</string>
+
+</resources>
