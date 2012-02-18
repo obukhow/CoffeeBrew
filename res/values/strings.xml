@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, BrewClockActivity!</string>
+    <string name="app_name">Coffee</string>
+    <string name="brew_up">Brew UP!</string>
+
+</resources>
