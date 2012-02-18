@@ -9,18 +9,21 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:padding="10dip">
+
     <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="20dip"
-      android:text="Brews: " />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brews"
+        android:textSize="20dip" />
+
     <TextView
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:text="None"
-      android:gravity="right"
-      android:textSize="20dip"
-      android:id="@+id/brew_count_label" />
+        android:id="@+id/brew_count_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/none"
+        android:textSize="20dip" />
+
   </LinearLayout>
   <LinearLayout
     android:orientation="horizontal"
@@ -49,10 +52,12 @@
       android:text="+"
       android:textSize="40dip" />
   </LinearLayout>
+
   <Button
-    android:id="@+id/brew_start"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:text="Start" />
+      android:id="@+id/brew_start"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:text="@string/start" />
+
 </LinearLayout>

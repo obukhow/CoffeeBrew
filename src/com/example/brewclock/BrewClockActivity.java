@@ -43,7 +43,10 @@ implements OnClickListener {
 		setBrewCount(0);
 	    setBrewTime(3);
 	}
-
+	
+	/**
+	 * Add observers on button click
+	 */
 	public void onClick(View v) {
 		if(v == brewAddTime)
 			setBrewTime(brewTime + 1);
@@ -71,7 +74,7 @@ implements OnClickListener {
 	    if(brewTime < 1)
 	      brewTime = 1;
 	 
-	    brewTimeLabel.setText(String.valueOf(brewTime) + "m");
+	    brewTimeLabel.setText(String.format(getResources().getString(R.string.min), String.valueOf(brewTime)));
 	  }
 	  
 	  /**
@@ -92,7 +95,7 @@ implements OnClickListener {
 	    brewCountDownTimer = new CountDownTimer(brewTime * 60 * 1000, 1000) {
 	      @Override
 	      public void onTick(long millisUntilFinished) {
-	        brewTimeLabel.setText(String.valueOf(millisUntilFinished / 1000) + "s");
+	        brewTimeLabel.setText(String.format(getResources().getString(R.string.sec), String.valueOf(millisUntilFinished / 1000)));
 	      }
 	 
 	      @Override
@@ -101,12 +104,12 @@ implements OnClickListener {
 	        setBrewCount(brewCount + 1);
 	 
 	        brewTimeLabel.setText(R.string.brew_up);
-	        startBrew.setText("Start");
+	        startBrew.setText(R.string.start);
 	      }
 	    };
 	 
 	    brewCountDownTimer.start();
-	    startBrew.setText("Stop");
+	    startBrew.setText(R.string.stop);
 	    isBrewing = true;
 	  }
 	 
@@ -118,6 +121,6 @@ implements OnClickListener {
 	      brewCountDownTimer.cancel();
 	 
 	    isBrewing = false;
-	    startBrew.setText("Start");
+	    startBrew.setText(R.string.start);
 	  }
 }
