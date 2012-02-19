@@ -55,9 +55,12 @@
 
   <Button
       android:id="@+id/brew_start"
-      android:layout_width="fill_parent"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom"
+      android:layout_weight="0.08"
+      android:background="#00FF00"
+      android:textColor="#FFF"
       android:text="@string/start" />
 
 </LinearLayout>

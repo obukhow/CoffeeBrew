@@ -1,6 +1,7 @@
 package com.example.brewclock;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.widget.Button;
@@ -105,11 +106,13 @@ implements OnClickListener {
 	 
 	        brewTimeLabel.setText(R.string.brew_up);
 	        startBrew.setText(R.string.start);
+	        startBrew.setBackgroundColor(Color.GREEN);
 	      }
 	    };
 	 
 	    brewCountDownTimer.start();
 	    startBrew.setText(R.string.stop);
+	    startBrew.setBackgroundColor(Color.RED);
 	    isBrewing = true;
 	  }
 	 
@@ -122,5 +125,6 @@ implements OnClickListener {
 	 
 	    isBrewing = false;
 	    startBrew.setText(R.string.start);
+	    startBrew.setBackgroundColor(Color.GREEN);
 	  }
 }
